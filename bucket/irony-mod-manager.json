@@ -1,0 +1,20 @@
+{
+    "version": "1.0.0",
+    "description": "Irony Mod Manager",
+    "homepage": "https://github.com/bcssov/IronyModManager/",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/bcssov/IronyModManager/releases/download/v1.26.187/win-x64.zip"
+        }
+    },
+    "bin": "IronyModManager.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/bcssov/IronyModManager/releases/download/v$version/win-x64.zip"
+            }
+        }
+    }
+}
