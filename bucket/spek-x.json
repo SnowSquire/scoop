@@ -24,5 +24,11 @@
                 "url": "https://github.com/MikeWang000000/spek-X/releases/download/v$version/spek-x-$version-windows-aarch64.zip"
             }
         }
-    }
+    },
+    "shortcuts": [
+        [
+            "spek.exe",
+            "Spek-X"
+        ]
+    ]
 }

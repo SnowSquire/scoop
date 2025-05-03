@@ -18,5 +18,11 @@
                 "url": "https://github.com/amtep/ck3-tiger/releases/download/v$version/imperator-tiger-windows-v$version.zip"
             }
         }
-    }
+    },
+    "shortcuts": [
+        [
+            "imperator-tiger.exe",
+            "Imperator Tiger"
+        ]
+    ]
 }

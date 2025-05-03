@@ -21,5 +21,11 @@
                 "url": "https://github.com/amtep/ck3-tiger/releases/download/v$version/ck3-tiger-windows-v$version.zip"
             }
         }
-    }
+    },
+    "shortcuts": [
+        [
+            "ck3-tiger.exe",
+            "CK3 Tiger"
+        ]
+    ]
 }

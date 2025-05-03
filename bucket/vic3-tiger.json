@@ -21,5 +21,11 @@
                 "url": "https://github.com/amtep/ck3-tiger/releases/download/v$version/vic3-tiger-windows-v$version.zip"
             }
         }
-    }
+    },
+    "shortcuts": [
+        [
+            "vic3-tiger.exe",
+            "Victoria 3 Tiger"
+        ]
+    ]
 }
