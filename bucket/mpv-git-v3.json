@@ -14,6 +14,10 @@
 		"64bit": {
 			"url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20250827/mpv-x86_64-v3-20250827-git-9f153e2.7z",
 			"hash": "2871e656bfaa43845c62cca76f56e36223d1ab34551af2b69f248d867f4b23f1"
+		},
+		"arm64": {
+			"url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20250827/mpv-aarch64-20250827-git-9f153e2.7z",
+			"hash": "3950c067b920d96402a799d819bc7227d9c9007aadeabaa68f7857df78fb2e63"
 		}
 	},
 	"pre_install": "Remove-Item \"$dir\\updater.bat\"",
@@ -28,6 +32,9 @@
 		"architecture": {
 			"64bit": {
 				"url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-x86_64-v3-$version-git-$matchCommit.7z"
+			},
+			"arm64": {
+				"url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-aarch64-$version-git-$matchCommit.7z"
 			}
 		}
 	}
