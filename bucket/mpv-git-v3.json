@@ -1,41 +1,47 @@
 {
-	"version": "20250827",
-	"description": "Video player based on MPlayer/mplayer2 (builds by shinchiro)",
-	"homepage": "https://mpv.io",
-	"license": "LGPL-2.1-or-later,GPL-2.0-or-later",
-	"notes": [
-		"To set and unset file type associations and AutoPlay handlers, run '$dir\\installer\\mpv-install.bat' and '$dir\\installer\\mpv-uninstall.bat' as administrator, respectively.",
-		"You can use Icaros ('nonportable/icaros-np') to enable thumbnails for all media types."
-	],
-	"suggest": {
-		"yt-dlp": "yt-dlp"
-	},
-	"architecture": {
-		"64bit": {
-			"url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20250827/mpv-x86_64-v3-20250827-git-9f153e2.7z",
-			"hash": "2871e656bfaa43845c62cca76f56e36223d1ab34551af2b69f248d867f4b23f1"
-		},
-		"arm64": {
-			"url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20250827/mpv-aarch64-20250827-git-9f153e2.7z",
-			"hash": "3950c067b920d96402a799d819bc7227d9c9007aadeabaa68f7857df78fb2e63"
-		}
-	},
-	"pre_install": "Remove-Item \"$dir\\updater.bat\"",
-	"env_add_path": ".",
-	"shortcuts": [["mpv.exe", "mpv"]],
-	"persist": "portable_config",
-	"checkver": {
-		"url": "https://api.github.com/repos/shinchiro/mpv-winbuild-cmake/releases/latest",
-		"regex": "mpv-x86_64-v3-(\\d+)-git-(?<commit>[\\da-f]+)\\.7z"
-	},
-	"autoupdate": {
-		"architecture": {
-			"64bit": {
-				"url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-x86_64-v3-$version-git-$matchCommit.7z"
-			},
-			"arm64": {
-				"url": "https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-aarch64-$version-git-$matchCommit.7z"
-			}
-		}
-	}
+    "version": "2025-09-03-b9ceaf2",
+    "description": "Video player based on MPlayer/mplayer2 (builds by zhongfly)",
+    "homepage": "https://mpv.io",
+    "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
+    "notes": [
+        "To set and unset file type associations and AutoPlay handlers, run '$dir\\installer\\mpv-install.bat' and '$dir\\installer\\mpv-uninstall.bat' as administrator, respectively.",
+        "You can use Icaros ('nonportable/icaros-np') to enable thumbnails for all media types."
+    ],
+    "suggest": {
+        "yt-dlp": "yt-dlp"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2025-09-03-b9ceaf2/mpv-x86_64-v3-20250903-git-b9ceaf2.7z",
+            "hash": "de096e360b018e2b537a30b867a2ea05519a572cee9dd606ace5dcf95646ed9e"
+        },
+        "arm64": {
+            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2025-09-03-b9ceaf2/mpv-aarch64-20250903-git-b9ceaf2.7z",
+            "hash": "3165b0c75b25fb26498c897de6af773a33633c4c8ca13a09bb65217f956814da"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\updater.bat\"",
+    "env_add_path": ".",
+    "shortcuts": [
+        [
+            "mpv.exe",
+            "mpv"
+        ]
+    ],
+    "persist": "portable_config",
+    "checkver": {
+        "url": "https://api.github.com/repos/zhongfly/mpv-winbuild/releases/latest",
+        "jsonpath": "$.assets..browser_download_url",
+        "regex": "(\\d{4}-\\d{2}-\\d{2}-[\\da-f]+)/mpv-x86_64-v3-(?<date>\\d{8})-git-(?<commit>[\\da-f]+)\\.7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/$version/mpv-x86_64-v3-$matchDate-git-$matchCommit.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/$version/mpv-aarch64-$matchDate-git-$matchCommit.7z"
+            }
+        }
+    }
 }
