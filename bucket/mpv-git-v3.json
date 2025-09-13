@@ -1,5 +1,5 @@
 {
-    "version": "2025-09-12-d837c43",
+    "version": "2025-09-13-d837c43",
     "description": "Video player based on MPlayer/mplayer2 (builds by zhongfly)",
     "homepage": "https://mpv.io",
     "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
@@ -12,12 +12,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2025-09-12-d837c43/mpv-x86_64-v3-20250912-git-d837c43.7z",
-            "hash": "b843f0a89d8faf767b129e33f59526c7e1301314d5dfff20cd770d182aad3632"
+            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2025-09-13-d837c43/mpv-x86_64-v3-20250913-git-d837c43.7z",
+            "hash": "ee75ad6ec03863d074242ede06c06918f158148b7133bdec7ea05131777f2f70"
         },
         "arm64": {
-            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2025-09-12-d837c43/mpv-aarch64-20250912-git-d837c43.7z",
-            "hash": "b65de8285804a63a599ba4e45d2cc647dd4ca4ea980755343fa3265b213fa825"
+            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2025-09-13-d837c43/mpv-aarch64-20250913-git-d837c43.7z",
+            "hash": "da7bbe58605a0150d10ad594b5933eb18f31ffe0fed728721b428111411f544e"
         }
     },
     "pre_install": "Remove-Item \"$dir\\updater.bat\"",
