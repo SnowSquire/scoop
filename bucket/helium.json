@@ -23,6 +23,7 @@
             "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
+    "extract_dir": "helium_$version_x64-windows",
     "shortcuts": [
         [
             "chrome.exe",
