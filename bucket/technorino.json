@@ -1,0 +1,43 @@
+{
+    "version": "2026-04-02T15:42:56Z",
+    "homepage": "https://github.com/2547techno/technorino",
+    "description": "A fork of Chatterino 2 with 7TV subscriber features.",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.9.3.zip",
+            "hash": "0a330920e01d184d6c5e3c5a2c9aa3a0203e32b92b91e94dada29be2ae61f0b9"
+        }
+    },
+    "extract_dir": "Chatterino2",
+    "bin": [
+        [
+            "chatterino.exe",
+            "technorino"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "chatterino.exe",
+            "technorino"
+        ]
+    ],
+    "persist": [
+        "Settings",
+        "Cache",
+        "Logs",
+        "Misc",
+        "ProfileAvatars"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/SevenTV/chatterino7/releases",
+        "jp": "$[0].created_at"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.9.3.zip"
+            }
+        }
+    }
+}
