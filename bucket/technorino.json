@@ -1,5 +1,5 @@
 {
-    "version": "2026-04-02T15:42:56Z",
+    "version": "c23891d16b3d0f63fa097d880335c08e9afa78e9",
     "homepage": "https://github.com/2547techno/technorino",
     "description": "A fork of Chatterino 2 with 7TV subscriber features.",
     "license": "MIT",
@@ -30,8 +30,8 @@
         "ProfileAvatars"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/SevenTV/chatterino7/releases",
-        "jp": "$[0].created_at"
+        "url": "https://api.github.com/repos/2547techno/technorino/git/ref/tags/nightly-build",
+        "jp": "$.object.sha"
     },
     "autoupdate": {
         "architecture": {
