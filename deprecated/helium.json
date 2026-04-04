@@ -1,0 +1,60 @@
+{
+    "version": "0.10.8.1",
+    "description": "Bullshit-free web browser, based on Chromium. Follows imput's ethics and norms.",
+    "homepage": "https://helium.imput.net/",
+    "license": {
+        "identifier": " GPL-3.0-only",
+        "url": "https://github.com/imputnet/helium-chromium/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/imputnet/helium-windows/releases/download/0.10.8.1/helium_0.10.8.1_x64-windows.zip",
+            "hash": "f3df77078f20fbb450bb69fada1bbd3969d591753071dd4cedf92cf32240cf07",
+            "extract_dir": "helium_0.10.8.1_x64-windows"
+        },
+        "arm64": {
+            "url": "https://github.com/imputnet/helium-windows/releases/download/0.10.8.1/helium_0.10.8.1_arm64-windows.zip",
+            "hash": "0b154c5cc6f77019053464ab45ee0cc96aabef1c4fe6b86bfbea24043fb2c6da",
+            "extract_dir": "helium_0.10.8.1_arm64-windows"
+        }
+    },
+    "bin": [
+        [
+            "chrome.exe",
+            "helium",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "chrome.exe",
+            "Helium",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "post_install": [
+        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\imput\\Helium\\User Data\")) {",
+        "    info '[Portable Mode]: Copying user data...'",
+        "    Copy-Item \"$env:LocalAppData\\imput\\Helium\\User Data\\*\" \"$dir\\User Data\" -Recurse",
+        "}"
+    ],
+    "env_set": {
+        "CHROME_EXECUTABLE": "$dir\\chrome.exe"
+    },
+    "persist": "User Data",
+    "checkver": {
+        "github": "https://github.com/imputnet/helium-windows/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/imputnet/helium-windows/releases/download/$version/helium_$version_x64-windows.zip",
+                "extract_dir": "helium_$version_x64-windows"
+            },
+            "arm64": {
+                "url": "https://github.com/imputnet/helium-windows/releases/download/$version/helium_$version_arm64-windows.zip",
+                "extract_dir": "helium_$version_arm64-windows"
+            }
+        }
+    }
+}
