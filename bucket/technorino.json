@@ -19,7 +19,7 @@
     "shortcuts": [
         [
             "chatterino.exe",
-            "technorino"
+            "Technorino"
         ]
     ],
     "persist": [
@@ -29,6 +29,7 @@
         "Misc",
         "ProfileAvatars"
     ],
+    "post_install": "Set-Content -Path (Join-Path $dir 'modes') -Value 'portable'",
     "checkver": {
         "url": "https://api.github.com/repos/2547techno/technorino/git/ref/tags/nightly-build",
         "jp": "$.object.sha"
