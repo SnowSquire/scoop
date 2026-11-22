@@ -21,11 +21,19 @@
         }
     },
     "bin": [
-        "bomtool.exe",
-        "pccritic.exe",
-        "pkgconf.exe",
-        "pkg-config.exe",
-        "spdxtool.exe"
+        "bin\\bomtool.exe",
+        "bin\\pccritic.exe",
+        "bin\\pkgconf.exe",
+        "bin\\pkg-config.exe",
+        "bin\\spdxtool.exe"
+    ],
+    "pre_install": [
+        "New-Item -ItemType Directory -Force -Path \"$dir\\bin\" | Out-Null",
+        "Move-Item -Path \"$dir\\*.exe\" -Destination \"$dir\\bin\""
+    ],
+    "persist": [
+        "lib",
+        "share"
     ],
     "checkver": {
         "github": "https://github.com/pkgconf/pkgconf",
